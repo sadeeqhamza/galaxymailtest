@@ -104,7 +104,5 @@ router.get('/getgmails', function(req, res) {
 });
 
 
-
-app.listen(3000,function(){
-  console.log("Live at Port 3000");
-});
+var port = process.env.PORT || 3000;
+    app.listen(port);
