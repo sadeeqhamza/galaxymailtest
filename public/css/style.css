@@ -1,0 +1,15 @@
+ .hidden
+ { 
+ display: none;
+ }
+
+ [type="checkbox"]:checked+label:before {
+ 	    border-top: 2px solid transparent!important;
+    border-left: 2px solid transparent!important;
+    border-right: 2px solid #fff!important;
+    border-bottom: 2px solid #fff!important;
+ }
+
+   
+
+

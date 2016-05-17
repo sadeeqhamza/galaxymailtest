@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><!-- materialize.css-->
+    <link href="css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css"><!--Let browser know website is optimized for mobile-->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title></title>
+</head>
+<body class="grey lighten-1">
+    <nav>
+       
+        <div class="nav-wrapper pink darken-3">
+        <div class="container">
+            
+                <a class="brand-logo" href="#!">mailflowtest</a>
+                <ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="#!.html">Version 2.0</a>
+                    </li>
+                    <li>
+                        <a href="#!.html">sadeeq hamza</a>
+                    </li>
+                </ul>
+            
+        </div>
+        </div>
+    </nav>
+    <main class="container" style="margin-top: 20px">
+
+        <div class="row">
+           
+            <div class="col m6">
+                <div class="card-panel" style="min-height:220px">
+                    <h5>Step 1: Input Data And Submit</h5>
+                    <div class="input-field col m6 s6">
+                        <input class="validate" id="name_input" placeholder="SADEEQ HAMZA" type="text"> <label for=
+                        "name_input">Name</label>
+                    </div>
+                    <div class="input-field col m6 s6">
+                        <input class="validate" id="email_input" placeholder="EMAIL" type="text"> <label for=
+                        "email_input">Email</label>
+                    </div>
+                    <div class="input-field col m3 s6">
+                        <input class="validate" id="400KVA" placeholder="400KVA" type="text"> <label for=
+                        "400KVA">400KVA</label>
+                    </div>
+                    <div class="input-field col m3 s6">
+                        <input class="validate" id="350KVA" placeholder="350KVA" type="text"> <label for=
+                        "350KVA">350KVA</label>
+                    </div>
+                    <div class="switch col s6 m6">
+                        <label>Night Shift <input id="shift_input" type="checkbox"> <span class="lever red"></span> Day
+                        Shift</label>
+                    </div>
+                     </div>
+                
+            </div>
+
+             <div class="col m6">
+                <div  style="overflow-y: scroll; height:469px;">
+                 <div class="card-panel">
+                 <h5 class="center">INBOX</h5>
+                 <div id="yahoo_inbox">
+                 <p class="right"><b>Yahoo(50)</b></p>
+                 <img src="yahoo.png" alt="Yahoo Image" height="56.5" width="56.5">
+                 </div>
+                 <div id="gmail_inbox">
+                  <p class="right"><b>Gmail(50)</b></p>
+                 <img src="gmail.png" alt="Gmail_Image" height="56.5" width="56.5">
+                 </div>
+                  <table class="responsive-table bordered highlight" id="myemails">
+                        <thead>
+                            <tr>
+                                <th data-field="date">Date</th>
+                                <th data-field="subject">Subject</th>
+                                <th data-field="from">From</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table><br>
+                    </div>
+                </div>
+            </div>
+            </div>
+           <div class="row" style="margin-top: -233px;">
+            <div class="col m3" style="margin-top: -233px;">
+                <div class="card-panel">
+                    <h5>Step 2: Gmail Test</h5>
+                    <div class="input-field col m6 s6">
+                        <input class="validate" id="subject_input" placeholder="Test Mail" type="text"> 
+                        <label for="subject_input">SUBJECT</label>
+                    </div>
+                    <button class="btn waves-effect waves-light col m2 hidden" id="authorize-button">Authorize Gmail Test</button>
+                     <a class="waves-effect waves-light red btn" id="gmail_test_btn">
+                     <i class="material-icons right">mail</i> Run Gmail Test</a>
+                </div>
+            </div>
+
+                
+      <div class="col s12 m3" style="margin-top: -233px;">
+        <div class="card-panel">
+         <h5>Step 3: Yahoo Test</h5>
+                <div class="input-field col m6 s6">
+                    <input class="validate" id="subject_input_yahoo" placeholder="Test Mail" type="text"> 
+                    <label for="subject_input_yahoo">SUBJECT</label>
+                </div>
+                <a class="waves-effect waves-light indigo btn" id="yahoo_test_btn">
+                <i class="material-icons right">mail_outline</i>Run Yahoo Test</a>
+        </div>
+      </div>
+  
+      
+            </div>
+            <div class="row">
+            <div class="col m12">
+                <div class="card" style="padding: 20px;">
+                    <h5>Dedicated Servers</h5>
+                    <table class="responsive-table bordered highlight" id="mytable">
+                        <thead>
+                            <tr>
+                                <th data-field="url">URL</th>
+                                <th data-field="owa_test">OWA Test</th>
+                                <th data-field="sent_yahoo">Sent Yahoo</th>
+                                <th data-field="recieved_yahoo">Recieved Yahoo</th>
+                                <th data-field="sent_gmail">Sent Gmail</th>
+                                <th data-field="recieved_gmail">Receved Gmail</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <a class="waves-effect waves-light green darken-2 btn-large center-align" id="report_btn"><i class=
+                    "material-icons left">print</i> Generate Email</a>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="modal2">
+            <div class="modal-content">
+                <div class="progress">
+                    <div class="indeterminate"></div>
+                </div>
+                <h2 class="center">PLEASE WAIT...</h2>
+            </div>
+        </div>
+        <div class="modal bottom-sheet" id="modal1">
+            <div class="modal-content">
+                <h4>Email</h4>
+                <p id="print_report">A bunch of text</p>
+            </div>
+            <div class="modal-footer">
+                <a class=" modal-action modal-close waves-effect waves-green btn-flat" href="#!">EXIT</a>
+            </div>
+        </div>
+    </main>
+    <script src="js/jquery-2.1.1.min.js" type="text/javascript">
+    </script> 
+    <script src="js/materialize.min.js" type="text/javascript">
+    </script> 
+    <script src="js/moment.min.js">
+    </script> 
+    <script src="js/gmailAuth.js" type="text/javascript">
+    </script> 
+    <script src="js/emailAccounts.js" type="text/javascript">
+    </script> 
+    <script src="js/main.js" type="text/javascript">
+    </script> 
+    <script src="js/report.js" type="text/javascript">
+    </script> 
+    <script src="js/buttons.js" type="text/javascript">
+    </script> 
+    <script src="https://apis.google.com/js/client.js?onload=main_load">
+    </script>
+</body>
+</html>

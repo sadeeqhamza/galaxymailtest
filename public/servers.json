@@ -1,0 +1,257 @@
+[
+{
+  "id":"airforce",
+  "Url": "https://mail.airforce.mil.ng/owa",
+  "from":"gb <gb@airforce.mil.ng>",
+  "alt":"gb@airforce.mil.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+  "id":"commtech",
+  "Url": "https://mail.commtech.gov.ng/owa",
+  "from":"GB <gb@commtech.gov.ng>",
+  "alt":"gb@commtech.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+  "id":"zumafilmfest",
+  "Url": "https://mail.zumafilmfest.gov.ng/owa",
+  "from":"GB <gb@zumafilmfest.gov.ng>",
+  "alt":"gb@zumafilmfest.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+ "id":"defencehq",
+  "Url": "https://mail.defencehq.mil.ng/owa",
+  "from":"gb <gb@defencehq.mil.ng>", 
+  "alt":"gb@defencehq.mil.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"fib",
+  "Url": "https://mail.fib.gov.ng/owa",
+  "from":"GB <gb@fib.gov.ng>",
+  "alt":"gb@fib.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"navymil",
+  "Url": "https://mail.navy.mil.ng/owa",
+  "from":"gb <gb@navy.mil.ng>",
+  "alt":"gb@navy.mil.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"nbc",
+  "Url": "https://mail.nbc.gov.ng/owa",
+  "from":"gb <gb@nbc.gov.ng>",
+  "alt":"gb@nbc.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"nema",
+  "Url": "https://mail.nema.gov.ng/owa",
+  "from":"Gb <gb@nema.gov.ng>",
+  "alt":"gb@nema.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"nmwcn",
+  "Url": "https://mail.nmwcn.gov.ng/owa",
+  "from": "GB <gb@nmwcn.gov.ng>",
+  "alt":"gb@nmwcn.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"nosdra",
+  "Url": "https://mail.nosdra.gov.ng/owa",
+  "from":"GB <gb@nosdra.gov.ng>",
+  "alt":"gb@nosdra.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"oaugf",
+  "Url": "https://mail.oaugf.gov.ng/owa",
+  "from":"gb <gb@oaugf.gov.ng>",
+  "alt":"gb@oaugf.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"mdgs",
+  "Url": "https://mail.mdgs.gov.ng/owa",
+  "from":"gb <gb@mdgs.gov.ng>",
+  "alt":"gb@mdgs.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"nafdac",
+  "Url": "https://webmail.nafdac.gov.ng/owa",
+  "from":"gb <gb@nafdac.gov.ng>",  
+  "alt":"gb@nafdac.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"umth",
+  "Url": "https://mail.umth.gov.ng/owa",
+  "from":"GB <gb@umth.gov.ng>",
+  "alt":"gb@umth.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"cbda",
+  "Url": "https://mail.cbda.gov.ng/owa",
+  "from":"GB <gb@cbda.gov.ng>",
+  "alt":"gb@cbda.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"fss2020",
+  "Url": "https://mail.fss2020.gov.ng/owa",
+  "from":"gb <gb@fss2020.gov.ng>",
+  "alt":"gb@fss2020.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"ohcsf",
+  "Url": "https://mail.ohcsf.gov.ng/owa",
+  "from":"GB <gb@ohcsf.gov.ng>",
+  "alt":"gb@ohcsf.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"nfc",
+  "Url": "https://mail.nfc.gov.ng/owa",
+  "from":"<gb@nfc.gov.ng>",
+  "alt":"gb@nfc.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"fmcumuahia",
+  "Url": "https://mail.fmcumuahia.gov.ng/owa",
+  "from":"GB <gb@fmcumuahia.gov.ng>",
+  "alt":"gb@fmcumuahia.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"parp",
+  "Url": "https://mail.parp.gov.ng/owa",
+  "from":"Gb <gb@parp.gov.ng>",
+  "alt":"gb@parp.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"population",
+  "Url": "https://mail.population.gov.ng/owa",
+  "from":"GB <gb@population.gov.ng>",
+  "alt":"gb@population.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"nsitf",
+  "Url": "https://mail.nsitf.gov.ng/owa",
+  "from":"GB <gb@nsitf.gov.ng>",
+  "alt":"gb@nsitf.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+},
+{
+"id":"nrcri",
+  "Url": "https://mail.nrcri.gov.ng/owa",
+  "from":"GB <gb@nrcri.gov.ng>",
+  "alt":"gb@nrcri.gov.ng",
+  "Owatest": true,
+  "SentYahoo": true,
+  "RecievedYahoo": true,
+  "SentGmail": true,
+  "RecievedGmail": true
+}
+
+
+]
