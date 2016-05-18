@@ -85,7 +85,7 @@ router.get('/getgmails', function(req, res) {
             }
         });
         client.openMailbox("INBOX", function(error, info) {
-            if (error) throw error;
+            if (error) {console.log("ERRORSADEEQ"+ error)};
             console.log("Message count in INBOX: " + info.count);
             // list newest 10 messages
             client.listMessages(-30, function(err, messages) {
