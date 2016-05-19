@@ -59,24 +59,24 @@ router.get('/getymails', function(req, res) {
 router.get('/getgmails', function(req, res) {
     var theData = [];
     console.log("higmail");
-    var client = inbox.createConnection(false, "imap.gmail.com", {
+    var gmail_client = inbox.createConnection(false, "imap.gmail.com", {
         secureConnection: true,
         auth: {
             user: "gbbtestmail@gmail.com",
             pass: "P@$$WORD1"
         }
     });
-    client.connect();
-    client.on("connect", function() {
+    gmail_client.connect();
+    gmail_client.on("connect", function() {
         console.log("Successfully connected to gmail server");
-        client.openMailbox("INBOX", function(error, info) {
+        gmail_client.client.openMailbox("INBOX", function(error, info) {
             if (error) {
                 console.log("ERRORSADEEQ" + error);
             }
             console.log("Message count in INBOX: " +
                 info.count);
             // list newest 10 messages
-            client.listMessages(-50, function(err,
+            gmail_client.listMessages(-50, function(err,
                 messages) {
                 messages.forEach(function(
                     message) {
