@@ -9,7 +9,7 @@ function loadYahoo() {
                 console.log("success Getting yahoo mails");
                 //bn= JSON.stringify(data);
                 for (var i = 0; i < data.length; i++) {
-                    $('#myemails tbody').append('<tr><td>' + moment(data[i].date).format('YYYY MM DD')+ moment(data[i].date).format('HH:mm:ss') +
+                    $('#myemails tbody').append('<tr><td>' + moment(data[i].date).format('YYYY MM DD')+ '<br>' +moment(data[i].date).format('HH:mm:ss') +
                         '</td>' + '<td>' + data[i].subject +
                         '</td>' + '<td>' + data[i].from +
                         '<td></tr>');
@@ -38,7 +38,7 @@ function loadGmail() {
             console.log("success Getting gmails");
             //bn= JSON.stringify(data);
             for (var i = 0; i < data.length; i++) {
-                $('#myemails tbody').append('<tr><td>' + data[i].date +
+                $('#myemails tbody').append('<tr><td>' + moment(data[i].date).format('YYYY MM DD')+ '<br>' +moment(data[i].date).format('HH:mm:ss') +
                     '</td>' + '<td>' + data[i].subject +
                     '</td>' + '<td>' + data[i].from +
                     '<td></tr>');
