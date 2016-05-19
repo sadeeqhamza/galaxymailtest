@@ -59,7 +59,7 @@ router.get('/getymails', function(req, res) {
 router.get('/getgmails', function(req, res) {
     var theGmailData = [];
     console.log("higmail");
-    var gmail_client = inbox.createConnection(false, "imap-mail.outlook.com", {
+    var gmail_client = inbox.createConnection(false, "imap.gmail.com", {
         secureConnection: true,
         auth: {
             user: "gbbtestmail@gmail.com",
