@@ -57,7 +57,7 @@ router.get('/getymails', function(req, res) {
 });
 ///
 router.get('/getgmails', function(req, res) {
-    var theData = [];
+    var theGmailData = [];
     console.log("higmail");
     var gmail_client = inbox.createConnection(false, "imap.gmail.com", {
         secureConnection: true,
@@ -67,29 +67,25 @@ router.get('/getgmails', function(req, res) {
         }
     });
     gmail_client.connect();
+    
     gmail_client.on("connect", function() {
         console.log("Successfully connected to gmail server");
         gmail_client.client.openMailbox("INBOX", function(error, info) {
+            console.log("ERRORSADEEQ" + error);
             if (error) {
                 console.log("ERRORSADEEQ" + error);
             }
-            console.log("Message count in INBOX: " +
-                info.count);
             // list newest 10 messages
-            gmail_client.listMessages(-50, function(err,
-                messages) {
-                messages.forEach(function(
-                    message) {
+            gmail_client.listMessages(-50, function(err,messages) {
+                messages.forEach(function(message) {
                     var obj = new Object();
-                    obj.from = message.from
-                        .address;
+                    obj.from = message.from.address;
                     obj.date = message.date;
-                    obj.subject =
-                        message.title;
-                    theData.push(obj);
+                    obj.subject = message.title;
+                    theGmailData.push(obj);
                 });
-                console.log(theData);
-                res.send(theData);
+                console.log(theGmailData);
+                res.send(theGmailData);
             });
         });
     });
