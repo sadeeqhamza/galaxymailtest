@@ -62,8 +62,8 @@ router.get('/getgmails', function(req, res) {
     var gmail_client = inbox.createConnection(false, "imap-mail.outlook.com", {
         secureConnection: true,
         auth: {
-            user: "sid1992@hotmail.co.uk",
-            pass: "hamzah2"
+            user: "gbbtestmail@gmail.com",
+            pass: "P@$$WORD1"
         }
     });
     gmail_client.connect();
