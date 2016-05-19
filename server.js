@@ -61,10 +61,13 @@ router.get('/getgmails', function(req, res) {
     console.log("higmail");
     var gmail_client = inbox.createConnection(false, "imap.gmail.com", {
         secureConnection: true,
-        auth: {
+        XOAuthToken: inbox.createXOAuthGenerator({
             user: "gbbtestmail@gmail.com",
-            pass: "P@$$WORD1"
-        }
+            requestorId: "sid0793@googlemail.com",
+            consumerKey: "AIzaSyAWkJXId3jlLPa9ZgStuk1jdwlwQhQ_v8k",
+            consumerSecret: "_XipUnZQuwsaOEwmWeCiWJsK"
+        })
+      
     });
     gmail_client.connect();
     
