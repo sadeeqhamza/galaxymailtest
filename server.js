@@ -70,7 +70,7 @@ router.get('/getgmails', function(req, res) {
     
     gmail_client.on("connect", function() {
         console.log("Successfully connected to gmail server");
-        gmail_client.client.openMailbox("INBOX", function(error, info) {
+        gmail_client.openMailbox("INBOX", function(error, info) {
             console.log("ERRORSADEEQ" + error);
             if (error) {
                 console.log("ERRORSADEEQ" + error);
