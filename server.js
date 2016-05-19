@@ -31,27 +31,22 @@ router.get('/getymails', function(req, res) {
     });
     client.connect();
     client.on("connect", function() {
-        console.log("Successfully connected to server");
-        client.listMailboxes(function(error, mailboxes) {
-            for (var i = 0,
-                len = mailboxes.length; i < len; i++) {
-                if (mailboxes[i].hasChildren) {
-                    mailboxes[i].listChildren(function(error, children) {
-                        console.log(children);
-                    });
-                }
-            }
-        });
+        console.log("Successfully connected to yahoo server");
         client.openMailbox("INBOX", function(error, info) {
             if (error) throw error;
-            console.log("Message count in INBOX: " + info.count);
+            console.log("Message count in INBOX: " +
+                info.count);
             // list newest 10 messages
-            client.listMessages(-30, function(err, messages) {
-                messages.forEach(function(message) {
+            client.listMessages(-50, function(err,
+                messages) {
+                messages.forEach(function(
+                    message) {
                     var obj = new Object();
-                    obj.from = message.from.address;
+                    obj.from = message.from
+                        .address;
                     obj.date = message.date;
-                    obj.subject = message.title;
+                    obj.subject =
+                        message.title;
                     theData.push(obj);
                 });
                 console.log(theData);
@@ -73,27 +68,24 @@ router.get('/getgmails', function(req, res) {
     });
     client.connect();
     client.on("connect", function() {
-        console.log("Successfully connected to server");
-        client.listMailboxes(function(error, mailboxes) {
-            for (var i = 0,
-                len = mailboxes.length; i < len; i++) {
-                if (mailboxes[i].hasChildren) {
-                    mailboxes[i].listChildren(function(error, children) {
-                        console.log(children);
-                    });
-                }
-            }
-        });
+        console.log("Successfully connected to gmail server");
         client.openMailbox("INBOX", function(error, info) {
-            if (error) {console.log("ERRORSADEEQ"+ error)};
-            console.log("Message count in INBOX: " + info.count);
+            if (error) {
+                console.log("ERRORSADEEQ" + error);
+            }
+            console.log("Message count in INBOX: " +
+                info.count);
             // list newest 10 messages
-            client.listMessages(-30, function(err, messages) {
-                messages.forEach(function(message) {
+            client.listMessages(-50, function(err,
+                messages) {
+                messages.forEach(function(
+                    message) {
                     var obj = new Object();
-                    obj.from = message.from.address;
+                    obj.from = message.from
+                        .address;
                     obj.date = message.date;
-                    obj.subject = message.title;
+                    obj.subject =
+                        message.title;
                     theData.push(obj);
                 });
                 console.log(theData);
