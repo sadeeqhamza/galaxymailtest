@@ -68,8 +68,8 @@ router.get('/getgmails', function(req, res) {
     });
     gmail_client.connect();
       gmail_client.on("error", function(er) {
-        console.trace('Module A');
-        console.error(er.stack);
+        console.log('hhhhkkkkk');
+        console.log(er);
         
       });
     
