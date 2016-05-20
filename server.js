@@ -71,7 +71,7 @@ router.get('/getgmails', function(req, res) {
         console.trace('Module A');
         console.error(er.stack);
         
-        )};
+      });
     
     gmail_client.on("connect", function() {
         console.log("Successfully connected to gmail server");
