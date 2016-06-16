@@ -6,7 +6,10 @@
     "start": "node Server.js"
   },
   "dependencies": {
+    "async": "^2.0.0-rc.5",
     "express": "latest",
-    "inbox": "^1.1.59"
+    "inbox": "^1.1.59",
+    "nodemailer": "^2.4.2",
+    "request": "^2.72.0"
   }
 }

@@ -1,157 +1,464 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <!--Google Icon Font-->
-<!-- materialize.css-->
     <link href="css/materialize.min.css" media="screen,projection" rel="stylesheet" type="text/css">
+    <link rel='stylesheet' href='css/mprogress.min.css'/>
     <link href="css/style.css" rel="stylesheet" type="text/css"><!--Let browser know website is optimized for mobile-->
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title></title>
+
+    <title>
+    </title>
 </head>
-<body class="grey lighten-1">
-    <nav>
+
+<body class="grey lighten-4">
+    <header>
+        <nav class="z-depth-0">
+            <div class="nav-wrapper pink darken-3">
+
+                <div class="container">
+                 <ul class="left hide-on-med-and-down">
+              
+
+                        <li>
+                            <a class="brand-logo" style="font-family: lobster-two; left:50px;font-size:36px;" href="#!.html">mailflow tests</a>
+                        </li>
+                        
+                        </ul>
+
+                    <ul class="right hide-on-med-and-down">
+
+                        <li>
+                            <a class="" href="#!.html">Version 4.0 Beta</a>
+                        </li>
+
+
+                        <li>
+                            <a href="#!" id="add_server_btn"><i class=" material-icons">add</i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <a class="button-collapse top-nav full hide-on-large-only" data-activates="nav-mobile" href="#"><i class="material-icons">menu</i></a>
+        </nav>
+
+
+        <ul class="side-nav fixed grey lighten-3 z-depth-0" id="slide-out">
+
        
-        <div class="nav-wrapper pink darken-3">
-        <div class="container">
-            
-                <a class="brand-logo" href="#!">mailflowtest</a>
-                <ul class="right hide-on-med-and-down">
-                    <li>
-                        <a href="#!.html">Version 2.0</a>
-                    </li>
-                    <li>
-                        <a href="#!.html">sadeeq hamza</a>
-                    </li>
-                </ul>
-            
+        
+           
+          <div class="container">
+
+
+            <li>
+                 <a href="#!" id="send-test-mail-btn" class="active">Send Test<i class="material-icons grey-text left-side-bar">drafts</i></a>
+            </li>
+
+
+
+<div class="divider"></div>
+
+            <li>
+                <a href="#!" id="owatest-btn">Owa<i class="material-icons red-text left-side-bar">vpn_lock</i></a>
+            </li>
+<div class="divider"></div>
+            <li>
+                <a href="#!" id="outbound-btn">Outbound <i class="material-icons red-text  left-side-bar">cloud_upload</i></a>
+            </li>
+<div class="divider"></div>
+
+            <li>
+                <a href="#!" id="inbound-btn">Inbound <i class="material-icons red-text  left-side-bar">cloud_download</i></a>
+            </li>
+
+<div class="divider"></div>
+            <li>
+                <a href="#!" id="gen-email-btn">Get Email <i class="material-icons grey-text  left-side-bar">print</i></a>
+            </li>
+           
+        </ul>
         </div>
-        </div>
-    </nav>
-    <main class="container" style="margin-top: 20px">
+    </header>
+
+
+    <main class="custom-con" style="margin-top: 5px">
+        <!-- Send Test Mail Content -->
+
+
+        <div id="SendTest" style="position:absolute;margin-top:-5px;">
 
         <div class="row">
+
+            <div class="col s12 m5">
+                <div class="card-panel z-depth-0">
+        <div class="center-align"><img alt="Yahoo Image" height="56.5" src="yahoo.png" width="56.5"></div>
+
+                    <br>
+
+
+                    <div class="row">
+                        <div class="input-field col m12 s12">
+                            <input class="validate" id="testMailYahoo" placeholder="Test Mail" type="text"> <label for="testMailYahoo">SUBJECT</label>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea class="materialize-textarea" id="testMailYahooContent"></textarea> <label for="testMailYahooContent">Content</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="center-align">
+
+                    
+                    <a class="btn-floating btn-large waves-effect waves-light indigo" id="yahoo_send_btn"><i class="material-icons">send</i></a>
+                    </div>
+                    <br>
+                </div>
+            </div>
+                  <!-- Gmail -->
+             <div class="col s12 m5">
+                <div class="card-panel z-depth-0">
+                   <div class="center-align"><img alt="Yahoo Image" height="56.5" src="gmail.png" width="56.5"></div>
+                    <br>
+
+
+                    <div class="row">
+                        <div class="input-field col m12 s12">
+                            <input class="validate" id="testMailGmail" placeholder="Test Mail" type="text"> <label for="testMailGmail">SUBJECT</label>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea class="materialize-textarea" id="testMailGmailContent"></textarea> <label for="testMailGmailContent">Content</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="center-align">
+                    <a class="btn-floating btn-large waves-effect waves-light red" id="gmail_send_btn"><i class="material-icons">send</i></a>
+                   
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        </div>
+       
+        <!-- Test Outbound -->
+
+ <div class="hidden" id="TestOwa">
+ <div class="col m9 custom-con">
+                    <div style="padding:20px;"  class="card z-depth-0">
+
+
+                        <table class="responsive-table bordered highlight centered" id="table_owa">
+                            <thead>
+                                <tr>
+                                    <th data-field="url">Server</th>
+
+                                    <th data-field="test_owa_field_btn">Test</th>
+
+                                    <th data-field="test_owa_result">Result</th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        </div>
+
+        <div class="hidden" id="TestOutbound">
+
+        <div class="col m12 custom-con">
+                    <div class="card z-depth-0" style="padding: 20px;">
+
+<p><b>NOTE: Emails recieved are replied with the subject: "Seen Yahoo" or "Seen Gmail"</b></p>
+                        <table class="responsive-table bordered highlight centered" id="table_outbound">
+                            <thead>
+                                <tr>
+                                    <th data-field="out_url">Server</th>
+                                    <th data-field="test_out_field_btn">Test</th>
+                                    <th data-field="test_out_result">Yahoo</th>
+                                    <th data-field="test_out_field_btn">Test</th>
+                                    <th data-field="test_out_result">Gmail</th>
+
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                
+        </div>
+        <!-- Test Inbound-->
+
+
+            <div class="hidden" id="TestInbound" style="position:absolute;margin-top:-43px;">
+        <div class="row custom-con">
+            <div class="col s12 m6">
+                <div class="card-panel z-depth-0 input-card">
+                    <div class="center-align"><img alt="gmail Image" height="56.5" src="gmail.png" width="56.5"></div>
+
+
+                    <div class="input-field col m6 s6">
+                        <input class="validate" id="subject_input" placeholder="Test Mail" type="text"> <label for="subject_input">SUBJECT</label>
+                    </div>
+                    <a class="btn-floating btn-large waves-effect waves-light indigo" id="gmail_test_btn"><i class="material-icons">send</i></a>
+
+
+                  
+                </div>
+            </div>
+
+
+            <div class="col s12 m6">
+                <div class="card-panel z-depth-0 input-card">
+                      <div class="center-align"><img alt="Yahoo Image" height="56.5" src="yahoo.png" width="56.5"></div>
+
+
+                    <div class="input-field col m6 s6">
+                        <input class="validate" id="subject_input_yahoo" placeholder="Test Mail" type="text"> <label for="subject_input_yahoo">SUBJECT</label>
+                    </div>
+                                        <a class="btn-floating btn-large waves-effect waves-light indigo" id="yahoo_test_btn"><i class="material-icons">send</i></a>
+
+                   
+                </div>
+            </div>
+
+
+            <div class="col s12 m6">
+                <div class="input-test-card">
+                    <div class="card-panel z-depth-0">
+                        
+                        <div id="gmail_inbox">
+                        <p class="right"><b>Gmail(50)</b>
+                        </p>
+                        <img alt="Gmail_Image" height="56.5" src="gmail.png" width="56.5">
+                        </div>
+
+
+                        <table class="responsive-table bordered highlight centered z-depth-0" id="gmail-inbox">
+                            <thead>
+                                <tr>
+                                    <th data-field="date">Date</th>
+
+                                    <th data-field="subject">Subject</th>
+
+                                    <th data-field="from">From</th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+             <div class="col s12 m6">
+                <div class="input-test-card">
+                    <div class="card-panel z-depth-0">
+                   <div id="yahoo_inbox">
+                        <p class="right"><b>Yahoo(50)</b>
+                        </p>
+                        <img alt="Yahoo Image" height="56.5" src="yahoo.png" width="56.5">
+                        </div>
+
+
+
+                        <table class="responsive-table bordered highlight centered" id="yahoo-inbox">
+                            <thead>
+                                <tr>
+                                    <th data-field="date">Date</th>
+
+                                    <th data-field="subject">Subject</th>
+
+                                    <th data-field="from">From</th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                            </tbody>
+                        </table>
+                        <br>
+                    </div>
+                </div>
+            </div>
+
+
+                <div class="col m12">
+                    <div class="card z-depth-0" style="padding: 20px;">
+
+                        <table class="responsive-table bordered highlight centered" id="table_inbound">
+                            <thead>
+                                <tr>
+                                      <th data-field="url">Server</th>
+                             <th data-field="recieved_yahoo">In Yahoo</th>
+
+                                    <th data-field="recieved_gmail">In Gmail</th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- Generate Email Content -->
+
+
+            <div class="hidden" id="GenEmail" style="position:absolute;margin-top:-5px;">
+             <!-- Modal Email -->
+
+
+                <div class="modal bottom-sheet" id="modal1">
+                    <div class="modal-content">
+                        <h4>Email</h4>
+
+
+                        <p id="print_report">A bunch of text</p>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <a class=" modal-action modal-close waves-effect waves-green btn-flat" href="#!">EXIT</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12">
+                        <div class="card-panel z-depth-0" style="min-height:230px">
+                            <h6><b>Data Input</b>
+                            </h6>
+                            <br>
+
+
+                            <div class="input-field col m6 s6">
+                                <input class="validate" id="name_input" placeholder="SADEEQ HAMZA" type="text"> <label for="name_input">Name</label>
+                            </div>
+
+
+                            <div class="input-field col m6 s6">
+                                <input class="validate" id="email_input" placeholder="EMAIL" type="text"> <label for="email_input">Email</label>
+                            </div>
+
+
+                            <div class="input-field col m3 s6">
+                                <input class="validate" id="400KVA" placeholder="400KVA" type="text"> <label for="400KVA">400KVA</label>
+                            </div>
+
+
+                            <div class="input-field col m3 s6">
+                                <input class="validate" id="350KVA" placeholder="350KVA" type="text"> <label for="350KVA">350KVA</label>
+                            </div>
+
+
+                            <div class="switch col s6 m6">
+                                <label>Night Shift <input id="shift_input" type="checkbox"> <span class="lever red"></span> Day Shift</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End -->
+
+
+                <div class="row">
+                    <div class="col m12">
+                        <div class="card z-depth-0" style="padding: 20px;">
+
+
+                            <table class="responsive-table bordered highlight" id="mytable">
+                                <thead>
+                                    <tr>
+                                        <th data-field="url">URL</th>
+
+                                        <th data-field="owa_test">OWA</th>
+
+                                        <th data-field="sent_yahoo">Out Yahoo</th>
+
+                                        <th data-field="recieved_yahoo">In Yahoo</th>
+
+                                        <th data-field="sent_gmail">Out Gmail</th>
+
+                                        <th data-field="recieved_gmail">In Gmail</th>
+                                    </tr>
+                                </thead>
+
+
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <br>
+                            <a class="waves-effect waves-light green darken-2 btn-large center-align" id="report_btn"><i class="material-icons left">print</i> Generate Email</a> <a class=
+                            "waves-effect waves-light teal darken-2 btn-large right" id="download_btn"><i class="material-icons left">file_download</i> Download Spread Sheet</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modals -->
+                <!-- Modal Loading -->
+
+
+               
+                <!-- Add Modal Structure -->
+
+
+               
            
-            <div class="col m6">
-                <div class="card-panel" style="min-height:220px">
-                    <h5>Step 1: Input Data And Submit</h5>
-                    <div class="input-field col m6 s6">
-                        <input class="validate" id="name_input" placeholder="SADEEQ HAMZA" type="text"> <label for=
-                        "name_input">Name</label>
-                    </div>
-                    <div class="input-field col m6 s6">
-                        <input class="validate" id="email_input" placeholder="EMAIL" type="text"> <label for=
-                        "email_input">Email</label>
-                    </div>
-                    <div class="input-field col m3 s6">
-                        <input class="validate" id="400KVA" placeholder="400KVA" type="text"> <label for=
-                        "400KVA">400KVA</label>
-                    </div>
-                    <div class="input-field col m3 s6">
-                        <input class="validate" id="350KVA" placeholder="350KVA" type="text"> <label for=
-                        "350KVA">350KVA</label>
-                    </div>
-                    <div class="switch col s6 m6">
-                        <label>Night Shift <input id="shift_input" type="checkbox"> <span class="lever red"></span> Day
-                        Shift</label>
-                    </div>
-                     </div>
-                
-            </div>
+         <div class="modal modal-fixed-footer" id="add_modal">
+                    <div class="modal-content">
+                        <h4>Add Server</h4>
 
-             <div class="col m6">
-                <div  style="overflow-y: scroll; height:469px;">
-                 <div class="card-panel">
-                 <h5 class="center">INBOX</h5>
-                 <div id="yahoo_inbox">
-                 <p class="right"><b>Yahoo(50)</b></p>
-                 <img src="yahoo.png" alt="Yahoo Image" height="56.5" width="56.5">
-                 </div>
-                 <div id="gmail_inbox">
-                  <p class="right"><b>Gmail(50)</b></p>
-                 <img src="gmail.png" alt="Gmail_Image" height="56.5" width="56.5">
-                 </div>
-                  <table class="responsive-table bordered highlight" id="myemails">
-                        <thead>
-                            <tr>
-                                <th data-field="date">Date</th>
-                                <th data-field="subject">Subject</th>
-                                <th data-field="from">From</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table><br>
-                    </div>
-                </div>
-            </div>
-            </div>
-           <div class="row" style="margin-top: -233px;">
-            <div class="col m3" style="margin-top: -233px;">
-                <div class="card-panel">
-                    <h5>Step 2: Gmail Test</h5>
-                    <div class="input-field col m6 s6">
-                        <input class="validate" id="subject_input" placeholder="Test Mail" type="text"> 
-                        <label for="subject_input">SUBJECT</label>
-                    </div>
-                    <button class="btn waves-effect waves-light col m2 hidden" id="authorize-button">Authorize Gmail Test</button>
-                     <a class="waves-effect waves-light red btn" id="gmail_test_btn">
-                     <i class="material-icons right">mail</i> Run Gmail Test</a>
-                </div>
-            </div>
 
-                
-      <div class="col s12 m3" style="margin-top: -233px;">
-        <div class="card-panel">
-         <h5>Step 3: Yahoo Test</h5>
-                <div class="input-field col m6 s6">
-                    <input class="validate" id="subject_input_yahoo" placeholder="Test Mail" type="text"> 
-                    <label for="subject_input_yahoo">SUBJECT</label>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input class="validate" id="server_name_input" type="text" value="google"> <label class="active" for="server_name_input">Name</label>
+                            </div>
+
+
+                            <div class="input-field col s12">
+                                <input class="validate" id="owa_url_input" type="text" value="www.google.com"> <label class="active" for="owa_url_input">Owa Url</label>
+                            </div>
+
+
+                            <div class="input-field col s12">
+                                <input class="validate" id="server_email_input" type="text" value="test@gmail.com"> <label class="active" for="server_email_input">Email Address</label>
+                            </div>
+                               <div class="input-field col s12">
+                                <input class="validate" id="owa_cell_input" type="text" value="B22"> <label class="active" for="owa_cell_input">Owa</label>
+                            </div>
+                             <div class="input-field col s12">
+                                <input class="validate" id="test_cell_input" type="text" value="C22"> <label class="active" for="test_cell_input">Owa</label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <a id="submit_server" class="modal-action modal-close waves-effect waves-green btn-flat" href="#!">Submit</a>
+                    </div>
                 </div>
-                <a class="waves-effect waves-light indigo btn" id="yahoo_test_btn">
-                <i class="material-icons right">mail_outline</i>Run Yahoo Test</a>
-        </div>
-      </div>
-  
-      
-            </div>
-            <div class="row">
-            <div class="col m12">
-                <div class="card" style="padding: 20px;">
-                    <h5>Dedicated Servers</h5>
-                    <table class="responsive-table bordered highlight" id="mytable">
-                        <thead>
-                            <tr>
-                                <th data-field="url">URL</th>
-                                <th data-field="owa_test">OWA Test</th>
-                                <th data-field="sent_yahoo">Sent Yahoo</th>
-                                <th data-field="recieved_yahoo">Recieved Yahoo</th>
-                                <th data-field="sent_gmail">Sent Gmail</th>
-                                <th data-field="recieved_gmail">Receved Gmail</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                    <a class="waves-effect waves-light green darken-2 btn-large center-align" id="report_btn"><i class=
-                    "material-icons left">print</i> Generate Email</a>
-                </div>
-            </div>
-        </div>
-        <div class="modal" id="modal2">
-            <div class="modal-content">
-                <div class="progress">
-                    <div class="indeterminate"></div>
-                </div>
-                <h2 class="center">PLEASE WAIT...</h2>
-            </div>
-        </div>
-        <div class="modal bottom-sheet" id="modal1">
-            <div class="modal-content">
-                <h4>Email</h4>
-                <p id="print_report">A bunch of text</p>
-            </div>
-            <div class="modal-footer">
-                <a class=" modal-action modal-close waves-effect waves-green btn-flat" href="#!">EXIT</a>
-            </div>
-        </div>
+                <!-- End Modal -->
     </main>
     <script src="js/jquery-2.1.1.min.js" type="text/javascript">
     </script> 
@@ -159,6 +466,8 @@
     </script> 
     <script src="js/moment.min.js">
     </script> 
+<script src="//use.edgefonts.net/lobster-two.js"></script> 
+<script src='js/mprogress.min.js'></script>
     <script src="js/emailAccounts.js" type="text/javascript">
     </script> 
     <script src="js/main.js" type="text/javascript">
@@ -166,8 +475,6 @@
     <script src="js/report.js" type="text/javascript">
     </script> 
     <script src="js/buttons.js" type="text/javascript">
-    </script> 
-    <script src="https://apis.google.com/js/client.js?onload=main_load">
     </script>
 </body>
 </html>
