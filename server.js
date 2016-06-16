@@ -26,7 +26,7 @@ var out_client = inbox.createConnection(143, "mail.airforce.mil.ng", {
     }
 });
  console.log("connect start outlook");
-out_client.connect();
+///out_client.connect();
 out_client.on("error", function(er) {
     ///return if error connecting
       console.log("error outlook");
